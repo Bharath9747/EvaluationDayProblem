@@ -20,6 +20,9 @@ public class PlayerStatistics {
     private int highestScore;
     private double average;
     private double strikeRate;
+    public  double getAverage(){
+        return this.wicketTaken/this.getMatchesPlayed();
+    }
 
 
 }
