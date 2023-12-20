@@ -20,7 +20,7 @@ public class Main {
         System.out.println(highestScorer.getPlayerName()+" "+ highestScorer.getScores());
         System.out.println();
         PlayerStatistics secondHighestScorer =
-                statisticsSet.stream().sorted(Comparator.comparing(PlayerStatistics::getScores).reversed()).collect(Collectors.toList()).stream().findFirst().get();
+                statisticsSet.stream().sorted(Comparator.comparing(PlayerStatistics::getScores).reversed()).collect(Collectors.toList()).stream().skip(1).findFirst().get();
         System.out.println(secondHighestScorer.getPlayerName()+" "+secondHighestScorer.getScores());
         System.out.println();
         PlayerStatistics leastScorer = statisticsSet.stream().sorted(Comparator.comparing(PlayerStatistics::getScores)).findFirst().get();
